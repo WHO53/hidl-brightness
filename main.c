@@ -44,7 +44,6 @@ static gboolean set_display_brightness(guint brightness) {
     
     light_state = gbinder_writer_new0(&writer, LightState);
 	light_state->color = (brightness << 16) | (brightness << 8) | brightness; 
-    light_state->brightnessMode = 1; 
 
     
     gbinder_writer_append_int32(&writer, 0); 
